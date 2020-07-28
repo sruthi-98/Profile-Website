@@ -60,15 +60,18 @@ table {
 .main {
   display: grid;
   grid-template-columns: 1fr 4fr 1fr;
-  grid-template-rows: 1fr 3fr 3fr;
+  grid-template-rows: 1fr 4fr 4fr;
   grid-template-areas: 
-    "intro intro intro"
+    ".intro ."
     ". image ."
     ". desc .";
 }
 
 .intro {
   grid-area: intro;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 
 .image {
@@ -99,6 +102,11 @@ table {
 html {
   font-family: "Lato", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
+
+body {
+  line-height: 1.25;
+}
+
 /*
 li {
   text-align: center;
@@ -163,7 +171,7 @@ a:hover {
   margin: 15%;
 }*/
 
-body{
+/*.body{
   background-color: #000;
   color: #fff;
 }
@@ -171,28 +179,21 @@ body{
 .intro {
   background-color: rgba(90, 91, 94, 0.75);
   color: #fff;
-}
+}*/
 
-h5 {
-  font-weight: 600;
-  font-size: 5vh;
-  padding: 1%;
-  text-transform: uppercase;
-}
-
-h3{
+.name {
   font-weight: 400;
-  font-size: 1.5vh;
-  padding: 1%;
+  font-size: 45px;
+  padding: 2px;
   text-transform: uppercase;
 }
 
-h2{
-  font-size: 1.2vh;
+.hello {
   font-weight: 300;
-  text-transform: uppercase;
-  padding: 1%;
+  font-size: 30px;
+  padding: 2px;
 }
+
 /*
 button.main {
   font-size: 1.2vh;
@@ -212,8 +213,8 @@ p {
   font-size: 1.2em;
   margin: 2% 0 0 0;
   letter-spacing: 2px;
-  line-height: 125%;
   padding: 10px;
+  font-weight: 300;
 }
 
 sup {

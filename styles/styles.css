@@ -57,30 +57,26 @@ table {
  ========================
 */
 
-@media screen and (min-width: 600px) {
+.main {
+  display: grid;
+  grid-template-columns: 1fr 4fr 1fr;
+  grid-template-rows: 1fr 3fr 3fr;
+  grid-template-areas: 
+    "intro intro intro"
+    ". image ."
+    ". desc .";
+}
 
-  .main {
-    display: grid;
-    grid-template-columns: 1fr 4fr 1fr;
-    grid-template-rows: 1fr 3fr 3fr;
-    grid-template-areas: 
-      "intro intro intro"
-      ". image ."
-      ". desc .";
-  }
-  
-  .intro {
-    grid-area: intro;
-  }
-  
-  .image {
-    grid-area: image;
-  }
-  
-  .desc {
-    grid-area: desc;
-  }
+.intro {
+  grid-area: intro;
+}
 
+.image {
+  grid-area: image;
+}
+
+.desc {
+  grid-area: desc;
 }
 
 /*

@@ -46,6 +46,54 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+
+/*
+=================================================================================================================
+*/
+
+/*
+ ========================
+ Grid Layout
+ ========================
+*/
+
+@media screen and (min-width: 600px) {
+
+  .main {
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+    grid-template-rows: 1fr 3fr 3fr;
+    grid-template-areas: 
+      "intro intro intro"
+      ". image ."
+      ". desc .";
+  }
+  
+  .intro {
+    grid-area: intro;
+  }
+  
+  .image {
+    grid-area: image;
+  }
+  
+  .desc {
+    grid-area: desc;
+  }
+
+}
+
+/*
+ ========================
+ Image
+ ========================
+*/
+
+.large-image {
+  height: 30em;
+}
+
+
 /*
  ========================
  Home
@@ -55,7 +103,7 @@ table {
 html {
   font-family: "Lato", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
-
+/*
 li {
   text-align: center;
 }
@@ -117,7 +165,7 @@ a:hover {
   text-transform: uppercase;
   text-align: center;
   margin: 15%;
-}
+}*/
 
 body{
   background-color: #000;
@@ -127,9 +175,6 @@ body{
 .intro {
   background-color: rgba(90, 91, 94, 0.75);
   color: #fff;
-  float: right;
-  padding: 7.5%;
-  height: 60%;
 }
 
 h5 {
@@ -152,7 +197,7 @@ h2{
   text-transform: uppercase;
   padding: 1%;
 }
-
+/*
 button.main {
   font-size: 1.2vh;
   text-align: center;
@@ -165,39 +210,20 @@ button.main {
   border-style: solid;
   border-color: rgb(181, 13, 49);
   border-width: 3px;
-}
+}*/
 
 p {
-  font-size: 1.3vw;
-  font-weight: 400;
+  font-size: 1.2em;
   margin: 2% 0 0 0;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
   line-height: 125%;
+  padding: 10px;
 }
 
 sup {
   vertical-align: super;
   font-size: smaller;
-}
-
-/*
- ========================
- Images
- ========================
-*/
-
-.small-image {
-  width: 55%;
-  height: 10%;
-  display: inline-block;
-  margin: 22.5% 22.5% 0 22.5%;
-}
-
-.large-image{
-  width: 100%;
-  height: 60%;
-  padding: 0 0 0 1.5%;
-}
+}*/
 
 /*
  ========================
@@ -205,7 +231,7 @@ sup {
  ========================
 */
 
-.col-lg-11 {
+/*.col-lg-11 {
   background-color: rgba(47, 49, 54, 0.5);
   margin-left: 1.5%;
   max-width: 90.166667% !important;
@@ -217,7 +243,7 @@ h4 {
   padding: 5% 2% 0 4%;
   text-transform: uppercase;
   letter-spacing: 1px;
-}
+}*/
 
 /*
  ========================
@@ -225,7 +251,7 @@ h4 {
  ========================
 */
 
-.main{
+/*.main {
   color: #fff;
   background-color: #fff;
   height: 2px;
@@ -294,6 +320,6 @@ button.resume {
   border-color: rgb(181, 13, 49);
   border-width: 3px;
   display: inline-block;
-}
+}*/
 
 

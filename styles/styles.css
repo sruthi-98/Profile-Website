@@ -60,11 +60,12 @@ table {
 .main {
   display: grid;
   grid-template-columns: 1fr 4fr 1fr;
-  grid-template-rows: 1fr 4fr 4fr;
+  grid-template-rows: 1fr 4fr 4fr 4fr;
   grid-template-areas: 
     ".intro ."
     ". image ."
-    ". desc .";
+    ". desc ."
+    ". skill .";
 }
 
 .intro {
@@ -80,6 +81,10 @@ table {
 
 .desc {
   grid-area: desc;
+}
+
+.skill {
+  grid-area: skill;
 }
 
 /*
@@ -99,6 +104,10 @@ table {
  ========================
 */
 
+:root {
+  --primary-color: hsl(54, 83%, 49%);
+}
+
 html {
   font-family: "Lato", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
@@ -107,85 +116,12 @@ body {
   line-height: 1.25;
 }
 
-/*
-li {
-  text-align: center;
-}
-
-a {
-	text-decoration: none;
-	font-size: 1.5vh;
-  color: #fff;
-  display: inline-block;
-  width: 100%;
-  padding: 20px 0;
-  border-width: 1px 0 ;
-  border-color: rgba(168, 163, 164, 0.2);
-  border-style: solid;
-}
-
-a:active, .active {
-  background-color: rgba(47, 49, 54, 0.85);
-  text-decoration: none;
-  color: #fff;
-  border-width: 0 3px 0 0;
-  border-color: rgb(181, 13, 49);
-  border-style: solid;
-}
-
-a:hover {
-  background-color: rgba(47, 49, 54, 0.85);
-  text-decoration: none;
-  color: #fff;
-  border-width: 0 3px 0 0;
-  border-color: rgb(181, 13, 49);
-  border-style: solid;
-}
-
-.col-lg-1 {
-  background-color: rgba(47, 49, 54, 0.5);
-}
-
-.col {
-  padding: 0 !important;
-  min-height: 100% !important;
-  display: inline-block;
-}
-
-.menu {
-  min-height: 100%;
-}
-
-#row1 {
-  height: 100%;
-}
-
-.name {
-  display: inline-block;
-  font-size: 1.35vh;
-  font-weight: 600;
-  color: #fff;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  text-align: center;
-  margin: 15%;
-}*/
-
-/*.body{
-  background-color: #000;
-  color: #fff;
-}
-
-.intro {
-  background-color: rgba(90, 91, 94, 0.75);
-  color: #fff;
-}*/
-
 .name {
   font-weight: 400;
   font-size: 45px;
   padding: 2px;
   text-transform: uppercase;
+  color: var(--primary-color);
 }
 
 .hello {
@@ -194,20 +130,13 @@ a:hover {
   padding: 2px;
 }
 
-/*
-button.main {
-  font-size: 1.2vh;
-  text-align: center;
-  width: 30%;
-  height: 10% !important;
-  background-color: rgba(90, 91, 94, 1);
-  color: #fff;
-  margin: 5% 35% 5% 35%;
-  padding: 1%;
-  border-style: solid;
-  border-color: rgb(181, 13, 49);
-  border-width: 3px;
-}*/
+.heading {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 32px;
+  color: var(--primary-color);
+  margin-top: 0.5em;
+}
 
 p {
   font-size: 1.2em;
@@ -217,10 +146,14 @@ p {
   font-weight: 300;
 }
 
+em {
+  font-weight: 400;
+}
+
 sup {
   vertical-align: super;
   font-size: smaller;
-}*/
+}
 
 /*
  ========================

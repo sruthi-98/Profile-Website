@@ -60,12 +60,13 @@ table {
 .main {
   display: grid;
   grid-template-columns: 1fr 4fr 1fr;
-  grid-template-rows: 1fr 4fr 4fr 4fr;
+  grid-template-rows: 1fr auto auto auto 1fr;
   grid-template-areas: 
-    ".intro ."
+    ". intro ."
     ". image ."
     ". desc ."
-    ". skill .";
+    ". skill ."
+    "footer footer footer";
 }
 
 .intro {
@@ -77,15 +78,31 @@ table {
 
 .image {
   grid-area: image;
+  display: grid;
+  justify-items: center;
 }
 
 .desc {
   grid-area: desc;
 }
 
+.footer{
+  grid-area: footer;
+}
+
 .skill {
   grid-area: skill;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto 1fr 1fr 1fr;
+  grid-template-areas: 
+  "heading heading";
 }
+
+.heading {
+  grid-area: heading;
+}
+
 
 /*
  ========================
@@ -95,6 +112,7 @@ table {
 
 .large-image {
   height: 30em;
+  margin: 3rem 0;
 }
 
 
@@ -130,20 +148,29 @@ body {
   padding: 2px;
 }
 
+.first-heading {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 32px;
+  color: var(--primary-color);
+}
+
 .heading {
   text-transform: uppercase;
   font-weight: 600;
   font-size: 32px;
   color: var(--primary-color);
-  margin-top: 0.5em;
+  margin: 2rem 0;
 }
 
 p {
-  font-size: 1.2em;
+  font-size: clamp(1rem, 1.2rem, 1.5rem);
   margin: 2% 0 0 0;
   letter-spacing: 2px;
   padding: 10px;
   font-weight: 300;
+  text-align: justify;
+  text-justify: auto;
 }
 
 em {
@@ -155,101 +182,20 @@ sup {
   font-size: smaller;
 }
 
-/*
- ========================
- Contact
- ========================
-*/
-
-/*.col-lg-11 {
-  background-color: rgba(47, 49, 54, 0.5);
-  margin-left: 1.5%;
-  max-width: 90.166667% !important;
-}
-
-h4 {
-  font-weight: 800;
-  font-size: 2.5vh;
-  padding: 5% 2% 0 4%;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}*/
-
-/*
- ========================
- Resume
- ========================
-*/
-
-/*.main {
-  color: #fff;
-  background-color: #fff;
-  height: 2px;
-  margin: 0.5% 4% 0 4%;
-  width: 92%;
-  border-width: 0;
-  float: left;
-}
-
-.sub-heading {
-  padding: 5% 0 0.5% 0;
-  margin-left: 4%;
-  font-size: 2vh;
-  display: inline-block;
-  font-weight: 600;
-  border-bottom: 2px solid rgb(181, 13, 49);
-}
-
-.item {
-  width: 90%;
-  height: auto;
-  margin: 2%;
-}
-
-.left-part {
-  padding: 1.5% 1.5% 0 1.5%;
-  margin-left: 4%;
-  font-size: 1.35vh;
-  font-weight: 600;
-  width: 12.5%;
-  text-align: right;
-  display: inline-block;
-}
-
-.right-part{
-  margin-top: 1.5%;
-  padding: 10 0 0 1.5%;
-  text-align: left;
-  width: 40%;
-  text-align: left;
-  border-left: 1px dashed white;
-  display: inline-block;
-}
-
-h6 {
-  font-size: 1.35vh;
-  font-weight: 600;
-}
-
-.institute, .desc {
-  font-weight: 400;
-  font-size: 1.2vh;
-  letter-spacing: 1.5px;
-}
-
-button.resume {
-  font-size: 1.2vh;
+.card {
+  justify-self: center;
+  justify-content: center;
   text-align: center;
-  width: 15%;
-  height: 5% !important;
-  background-color: rgba(90, 91, 94, 1);
-  color: #fff;
-  margin: 2% 5%;
-  padding: 1%;
-  border-style: solid;
-  border-color: rgb(181, 13, 49);
-  border-width: 3px;
-  display: inline-block;
-}*/
+  margin: 1rem;
+  height: 6rem;
+  width: 13rem;
+  font-size: 1.1rem;
+}
+
+.card:hover {
+  background-color: hsla(54, 83%, 49%, 90%);;
+}
+
+
 
 

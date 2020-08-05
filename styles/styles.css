@@ -66,6 +66,7 @@ table {
     ". image ."
     ". desc ."
     ". skill ."
+    ". resume ."
     "footer footer footer";
 }
 
@@ -90,6 +91,10 @@ table {
   grid-area: footer;
 }
 
+.resume {
+  grid-area: resume;
+}
+
 .skill {
   grid-area: skill;
   display: grid;
@@ -103,6 +108,10 @@ table {
   grid-area: heading;
 }
 
+
+@media only screen and (min-width:) {
+
+}
 
 /*
  ========================
@@ -124,6 +133,7 @@ table {
 
 :root {
   --primary-color: hsl(54, 83%, 49%);
+  --font-size: clamp(1rem, 1.2rem, 1.5rem)
 }
 
 html {
@@ -164,7 +174,7 @@ body {
 }
 
 p {
-  font-size: clamp(1rem, 1.2rem, 1.5rem);
+  font-size: var(--font-size);
   margin: 2% 0 0 0;
   letter-spacing: 2px;
   padding: 10px;
@@ -195,6 +205,21 @@ sup {
 .card:hover {
   background-color: hsla(54, 83%, 49%, 90%);;
 }
+
+.resume, .resume:hover {
+  font-size: var(--font-size);
+  margin: 1rem 0;
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
+}
+
+.resume:hover {
+  color: rgba(48, 46, 46, 0.5);
+}
+
+
+
 
 
 
